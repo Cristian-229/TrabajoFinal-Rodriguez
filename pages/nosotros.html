@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+  <title>Overclock MotoParts</title>
+</head>
+
+<body class="body">
+  <header class="header">
+
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgba(0, 0, 0, 0.644);">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/img/logo.png" alt="logo" class="d-inline-block align-text-top" id="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 custom-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Index</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tiendaLink" href="tienda.html">Tienda</a>
+            </li>
+            <li class="nav-item" id="loginButton">
+              <a class="nav-link" href="login.html"><i class="fa fa-user"></i> Login</a>
+            </li>
+            <li class="nav-item" id="panelButton" style="display: none;">
+              <a class="nav-link" href="panel.html"><i class="fa fa-cog"></i> Panel</a>
+            </li>
+            <li class="nav-item" id="logoutButton" style="display: none;">
+              <a class="nav-link" href="#"><i class="fa fa-sign-out"></i> Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col p-0 position-relative">
+          <video class="banner__video" autoplay muted loop>
+            <source src="../assets/video/banner.mp4" type="video/mp4">
+          </video>
+          <h2 class="banner__text1">Bienvenido a</h2>
+          <h1 class="banner__text2">Overclock Parts</h1>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+
+  <main class="main">
+
+    <div class="about">
+      <div class="container mb-5 mt-5">
+        <div class="row ">
+
+          <div class="col-md-6 justify-content-center">
+            <h2 style="color: #ffc107; font-size: 2.5rem; text-align:center">Descripción de la Empresa</h2>
+            <p>En OverLock nos especializamos en ofrecer una amplia gama de partes y accesorios de alta calidad para
+              motocicletas.
+              Desde filtros y neumáticos hasta sistemas de escape y luces LED, tenemos todo lo que necesitas para
+              personalizar
+              y mantener tu moto con facilidad. Con un enfoque en el servicio al cliente excepcional y asesoramiento
+              experto,
+              estamos aquí para apoyarte en cada paso del camino hacia una experiencia de conducción superior.
+
+              Visítanos en línea o en nuestra tienda física y descubre por qué OverLock es tu destino número uno para
+              partes y accesorios de moto. Nuestra pasión por las motocicletas se refleja en cada producto que vendemos,
+              asegurando que encuentres exactamente lo que buscas para maximizar tu disfrute y seguridad en la
+              carretera.
+
+            </p>
+          </div>
+
+
+          <div class="col-md-6 p-3 border rounded " style="background-color: #f0f0f0;">
+            <img src="../assets/img/overclockteam.png" class="img-fluid" alt="Foto del Equipo de Trabajo">
+          </div>
+        </div>
+      </div>
+
+      <div class="container py-5">
+        <div class="text-center text-white">
+          <h2 class="mb-4" style="font-size: 2.5rem; color: #ffc107;">¡Somos Pet Friendly!</h2>
+          <p>
+            Somos un equipo comprometido que valora profundamente a los animales. Nos dedicamos a facilitar el proceso
+            de adopción de perros, buscando hogares amorosos para estos compañeros leales y cariñosos.
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="row justify-content-center" id="card-container">
+
+          </div>
+        </div>
+
+        <template>
+          <div class="card mb-5 text-center mx-2" style="max-width: 20rem; max-height: 25rem;">
+            <img src="..." id="img-dog" class="card-img-top p-2 border rounded"
+              style="background-color: #e3dcff; max-height: 15rem;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title-dog">🐾❤🐾</h5>
+              <a href="#" class="btn btn-primary btn-dog" id="enlaceDog">¡Quiero adoptarlo!</a>
+            </div>
+          </div>
+        </template>
+
+      </div>
+  </main>
+
+  <footer class="footer">
+
+    <ul class="footer__nav-list">
+      <li class="footer__nav-item"><a class="footer__nav-link" href="../index.html">Index</a></li>
+      <li class="footer__nav-item"><a class="footer__nav-link" href="nosotros.html">Nosotros</a></li>
+      <li class="footer__nav-item"><a class="footer__nav-link" href="login.html">Tienda</a></li>
+      <li class="header__nav-item"><a class="footer__nav-link" id="panelAdmin" href="panel.html">Panel</a></li>
+    </ul>
+
+    <ul class="footer__redes-list">
+      <li class="footer__redes-item"><img class="footer__redes-img" src="../assets/img/facebook.webp" alt=""><a
+          class="footer__redes-link" href="#"></a></li>
+      <li class="footer__redes-item"><img class="footer__redes-img" src="../assets/img/instagram.webp" alt=""><a
+          class="footer__redes-link" href="#"></a></li>
+      <li class="footer__redes-item"><img class="footer__redes-img" src="../assets/img/whatsapp.webp" alt=""><a
+          class="footer__redes-link" href="#"></a></li>
+    </ul>
+
+  </footer>
+
+  <script src="../main.js"></script>
+  <script src="../js/nosotros.js"></script>
+  <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../js/sesion.js"></script>
+  <script src="../js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</body>
+
+</html>

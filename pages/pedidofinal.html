@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <title>Overclock MotoParts - Pedido Final</title>
+</head>
+
+<body class="body">
+  <header class="header">
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgba(0, 0, 0, 0.644);">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/img/logo.png" alt="logo" class="d-inline-block align-text-top" id="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 custom-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Index</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tiendaLink" href="tienda.html">Tienda</a>
+            </li>
+            <li class="nav-item" id="loginButton">
+              <a class="nav-link" href="login.html"><i class="fa fa-user"></i> Login</a>
+            </li>
+            <li class="nav-item" id="panelButton" style="display: none;">
+              <a class="nav-link" href="panel.html"><i class="fa fa-cog"></i> Panel</a>
+            </li>
+            <li class="nav-item" id="logoutButton" style="display: none;">
+              <a class="nav-link" href="#"><i class="fa fa-sign-out"></i> Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col p-0 position-relative">
+          <video class="banner__video" autoplay muted loop>
+            <source src="../assets/video/banner.mp4" type="video/mp4">
+          </video>
+          <h2 class="banner__text1">Bienvenido a</h2>
+          <h1 class="banner__text2">Overclock Parts</h1>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+    <div class="container mt-4">
+      <h2 class="mb-4">Resumen del Pedido</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="pedidoResumen">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3" class="text-right"><strong>Total General</strong></td>
+            <td id="totalGeneral"></td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="d-flex justify-content-between">
+        <button id="modificarPedido" class="btn btn-warning">Modificar Pedido</button>
+        <button id="enviarPedido" class="btn btn-success">Enviar Pedido</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <ul class="footer__nav-list">
+      <li class="footer__nav-item"><a class="footer__nav-link" href="../index.html">Index</a></li>
+      <li class="footer__nav-item"><a class="footer__nav-link" href="nosotros.html">Nosotros</a></li>
+      <li class="footer__nav-item"><a class="footer__nav-link" id="tiendaLink" href="tienda.html">Tienda</a></li>
+      <li class="footer__nav-item"><a class="footer__nav-link" id="panelAdmin" href="panel.html">Panel</a></li>
+    </ul>
+    <ul class="footer__redes-list">
+      <li class="footer__redes-item"><img class="footer__redes-img" src="../assets/img/facebook.webp" alt=""><a
+          class="footer__redes-link" href="#"></a></li>
+      <li class="footer__redes-item"><img class="footer__redes-img" src="../assets/img/instagram.webp" alt=""><a
+          class="footer__redes-link" href="#"></a></li>
+      <li class="footer__redes-item"><img class="footer__redes-img" src="../assets/img/whatsapp.webp" alt=""><a
+          class="footer__redes-link" href="#"></a></li>
+    </ul>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../js/sesion.js"></script>
+  <script src="../js/login.js"></script>
+  <script src="../js/scart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  
+</body>
+
+</html>

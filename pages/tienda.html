@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Overclock MotoParts</title>
+</head>
+
+<body class="body">
+    <header class="header">
+        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgba(0, 0, 0, 0.644);">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/img/logo.png" alt="logo" class="d-inline-block align-text-top" id="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 custom-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Index</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tiendaLink" href="tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item" id="loginButton">
+                            <a class="nav-link" href="login.html"><i class="fa fa-user"></i> Login</a>
+                        </li>
+                        <li class="nav-item" id="panelButton" style="display: none;">
+                            <a class="nav-link" href="panel.html"><i class="fa fa-cog"></i> Panel</a>
+                        </li>
+                        <li class="nav-item" id="logoutButton" style="display: none;">
+                            <a class="nav-link" href="#"><i class="fa fa-sign-out"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col p-0 position-relative">
+                    <video class="banner__video" autoplay muted loop>
+                        <source src="../assets/video/banner.mp4" type="video/mp4">
+                    </video>
+                    <h2 class="banner__text1">Bienvenido a</h2>
+                    <h1 class="banner__text2">Overclock Parts</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="subMenuProductos">
+            <div class="tituloYcarrito">
+                <h2>¡Verifica que todo este en orden!</h2>
+            </div>
+            <div class="busqueda">
+                <input type="text" class="busqueda__barra" id="busqueda" placeholder="Busqueda">
+            </div>
+        </div>
+        <div class="productos">
+            <div class="contenedorEstilo">
+                <div class="contenedorTitulos">
+                    <div class="contenedorTitulos_botones">
+                        <button id="desc-prod">▼</button>
+                        <div class="titulos">
+                            <h2>Producto</h2>
+                        </div>
+                        <button id="asc-producto">▲</button>
+                    </div>
+                    <div class="contenedorTitulos_botones">
+                        <button id="desc-precio">▼</button>
+                        <div class="titulos">
+                            <h2>Precio</h2>
+                        </div>
+                        <button id="asc-precio">▲</button>
+                    </div>
+                    <div class="contenedorTitulos_botones">
+                        <button id="desc-stock">▼</button>
+                        <div class="titulos">
+                            <h2>Stock</h2>
+                        </div>
+                        <button id="asc-stock">▲</button>
+                    </div>
+                    <div class="titulos">
+                        <h2>Cantidad</h2>
+                    </div>
+                </div>
+            </div>
+            <template id="producto-template">
+                <div class="productos__listado">
+                    <div class="producto__foto">
+                        <img class="producto__item">
+                    </div>
+                    <div class="producto__descripcion">
+                        <p class="descripcion"></p>
+                    </div>
+                    <div id="precio" class="producto__precio">
+                        <p class="precio"></p>
+                    </div>
+                    <div class="producto__stock">
+                        <p class="stock"></p>
+                    </div>
+                    <div class="producto__cantidad">
+                        <div class="producto__agregarSacar">
+                            <button class="producto__boton">-</button>
+                            <p class="unidades"></p>
+                            <button class="producto__boton">+</button>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div class="productos__total">
+            <div class="productos__precioTotal">
+                <h2>Total</h2>
+                <p id="total">10</p>
+            </div>
+            <div class="productos__confirmacion">
+                <button class="productos__botonesConfirmacion">Cancelar</button>
+                <button class="productos__botonesConfirmacion">Confirmar</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <ul class="footer__nav-list">
+            <li class="footer__nav-item"><a class="footer__nav-link" href="../index.html">Index</a></li>
+            <li class="footer__nav-item"><a class="footer__nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="footer__nav-item"><a class="footer__nav-link" id="tiendaLink" href="tienda.html">Tienda</a></li>
+            <li class="header__nav-item"><a class="footer__nav-link" id="panelAdmin" href="panel.html">Panel</a></li>
+        </ul>
+        <ul class="footer__redes-list">
+            <li class="footer__redes-item"><img class="footer__redes-img" src="../assets/img/facebook.webp" alt=""><a
+                    class="footer__redes-link" href="#"></a></li>
+            <li class="footer__redes-item"><img class="footer__redes-img" src="../assets/img/instagram.webp" alt=""><a
+                    class="footer__redes-link" href="#"></a></li>
+            <li class="footer__redes-item"><img class="footer__redes-img" src="../assets/img/whatsapp.webp" alt=""><a
+                    class="footer__redes-link" href="#"></a></li>
+        </ul>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/store.js"></script>
+    <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/sesion.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/scart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../main.js"></script>
+
+</body>
+
+</html>
